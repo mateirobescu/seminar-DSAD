@@ -21,7 +21,7 @@ x = nan_replace(x)
 
 x_std = standardizare(x)
 x_c = standardizare(x, scal=False)
-tabelare_salvare_matrice(x_std, df.index, variabile, df.index.names, "x_std.csv")
+tabelare_salvare_matrice(x_std, df.index, variabile, df.index.name, "x_std.csv")
 tabelare_salvare_matrice(x_c, df.index, variabile, df.index.name, "x_c.csv")
 
 # std = StandardScaler()

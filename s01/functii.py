@@ -23,8 +23,7 @@ def tabelare_salvare_matrice(x: np.ndarray, index_linie, index_coloana, nume_ind
 	df.index.name = nume_index
 	if nume_fisier is not None:
 		df.to_csv(f"data_out/{nume_fisier}")
-
-
+		
 
 def calcul_corelatii_covariante(x: np.ndarray, y: np.ndarray):
 	clase = np.unique(y)

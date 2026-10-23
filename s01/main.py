@@ -2,7 +2,6 @@ import sys
 
 import numpy as np
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
 
 from functii import nan_replace, standardizare, tabelare_salvare_matrice, calcul_corelatii_covariante
 
@@ -36,3 +35,4 @@ r, v, clase = calcul_corelatii_covariante(x, df["Regiunea"].values)
 for i in zip(clase, r, v):
 	tabelare_salvare_matrice(i[1], variabile, variabile, "Indicatori", f"R_{i[0]}.csv")
 	tabelare_salvare_matrice(i[2], variabile, variabile, "Indicatori", f"V_{i[0]}.csv")
+	

@@ -36,8 +36,10 @@ def tabelare_varianta(alpha:np.ndarray):
 			"Varianta cumulata": np.cumsum(alpha),
 			"Procent varianta": procent,
 			"Procnet cumulat": np.cumsum(procent)
-		}, ["C" + str(i+1)]
+		}, ["C" + str(i+1) for i in range(len(alpha))]
 	)
+	df.index.name = "Componenta"
+	return df
 	
 	
 	

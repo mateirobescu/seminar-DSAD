@@ -2,7 +2,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-from s04.functii import nan_replace_df, acp
+from s04.functii import nan_replace_df, acp, tabelare_varianta
 
 np.set_printoptions(suppress=True, precision=5, threshold=sys.maxsize)
 
@@ -18,6 +18,8 @@ x_, r_v, alpha, a, c = acp(x)
 
 # Analiza variantei componentelor
 # Tabelarea variantei
+df_varianta = tabelare_varianta(alpha)
+df_varianta.round(3).to_csv("data_out/Varianta.csv")
 
 
 
